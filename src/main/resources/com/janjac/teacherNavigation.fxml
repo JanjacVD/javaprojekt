@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.janjac.controllers.components.TeacherNavigation">
+   <children>
+      <MenuBar layoutX="-1.0" prefHeight="34.0" prefWidth="612.0" style="-fx-background-color: #69DDFF;">
+         <menus>
+            <Menu mnemonicParsing="false" text="Subject">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#navigateToSubjectList" text="Subject list" />
+                  <MenuItem mnemonicParsing="false" onAction="#navigateToSubjectScheduleList" text="Subject Schedule list" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Bus">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#navigateToBusList" text="Bus list" />
+                  <MenuItem mnemonicParsing="false" onAction="#navigateToBusRouteList" text="Bus route list" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Attendance">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#navigateToAttendanceList" text="Attendance List" />
+                  <MenuItem mnemonicParsing="false" onAction="#navigateToAttendanceInput" text="Enter attendance" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logout">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

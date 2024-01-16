@@ -17,7 +17,6 @@ public class UserMigration extends Migration {
     }
     public static void down(){
         Schema schema = new Schema("user");
-        System.out.println(schema.down());
         Migration.down(schema);
     }
 }

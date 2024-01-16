@@ -37,8 +37,6 @@ public class DbConnection implements AutoCloseable {
         return preparedStatement;
     }
     public int executeUpdate(String query, ArrayList<Object> params) throws SQLException {
-        System.out.println(query);
-        System.out.println(params);
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             setParameters(preparedStatement, params);
             return preparedStatement.executeUpdate();

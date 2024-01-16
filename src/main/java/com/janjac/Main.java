@@ -1,14 +1,11 @@
 package com.janjac;
 
-import com.janjac.database.DbConnection;
-import com.janjac.models.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class Main extends Application {
 
@@ -17,12 +14,13 @@ public class Main extends Application {
     public void start(Stage stage){
         try {
             setPrimaryStage(stage);
-            VBox root =  FXMLLoader.load(Main.class.getResource("hello-view.fxml"));
+            AnchorPane root =  FXMLLoader.load(Main.class.getResource("login-view.fxml"));
             Scene scene = new Scene(root);
-
+            stage.setTitle("Janjac projekt");
+            stage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
             getPrimaryStage().setScene(scene);
+            getPrimaryStage().setResizable(false);
             getPrimaryStage().show();
-            getPrimaryStage().setResizable(true);
 
         }catch (Exception e){
             e.printStackTrace();

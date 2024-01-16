@@ -16,7 +16,6 @@ public class SubjectPeriodMigration extends Migration{
     }
     public static void down(){
         Schema schema = new Schema("subject_period");
-        System.out.println(schema.down());
         Migration.down(schema);
     }
 }

@@ -37,7 +37,7 @@ public class Column {
 
     }
     public Column foreign(String references, String key) {
-        this.foreignString = " FOREIGN KEY (" + this.columnName + ") REFERENCES " + references + "(" + key + ")";
+        this.foreignString = ", FOREIGN KEY (" + this.columnName + ") REFERENCES " + references + "(" + key + ")";
         return this;
     }
 

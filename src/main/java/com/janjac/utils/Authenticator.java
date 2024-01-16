@@ -6,7 +6,6 @@ import com.janjac.exceptions.UnavailableAtrributeException;
 import com.janjac.models.User;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class Authenticator {
     public static User authenticate(String username, String password) throws FailedAuthException {

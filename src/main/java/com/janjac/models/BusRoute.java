@@ -7,6 +7,12 @@ public class BusRoute extends Model {
     protected String busNumber;
     protected String startPoint;
     protected String endPoint;
+
+    @Override
+    public String toString() {
+        return this.busNumber;
+    }
+
     @Override
     public String[] fillable() {
         return new String[]{"busNumber", "startPoint", "endPoint"};
@@ -20,4 +26,27 @@ public class BusRoute extends Model {
         super(builder);
     }
 
+    public String getBusNumber() {
+        return busNumber;
+    }
+
+    public void setBusNumber(String busNumber) {
+        this.busNumber = busNumber;
+    }
+
+    public String getStartPoint() {
+        return startPoint;
+    }
+
+    public void setStartPoint(String startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    public String getEndPoint() {
+        return endPoint;
+    }
+
+    public void setEndPoint(String endPoint) {
+        this.endPoint = endPoint;
+    }
 }

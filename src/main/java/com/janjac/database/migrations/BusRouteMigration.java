@@ -4,19 +4,17 @@ import com.janjac.abstractions.Migration;
 import com.janjac.database.schema.Schema;
 
 public class BusRouteMigration extends Migration {
-    protected String busNumber;
-    protected String startPoint;
-    protected String endPoint;
     public static void up(){
-        Schema schema = new Schema("bus_route");
+        Schema schema = new Schema("busroute");
         schema.id();
+        schema.timestamp();
         schema.string("busNumber");
         schema.string("startPoint");
         schema.string("endPoint");
         Migration.up(schema);
     }
     public static void down(){
-        Schema schema = new Schema("bus_route");
+        Schema schema = new Schema("busroute");
         System.out.println(schema.down());
         Migration.down(schema);
     }

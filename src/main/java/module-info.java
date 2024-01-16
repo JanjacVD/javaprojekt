@@ -12,7 +12,11 @@ module com.janjac {
     requires java.sql;
     requires jbcrypt;
     requires javafaker;
-
+    exports com.janjac.controllers.auth;
+    exports com.janjac.controllers.components;
+    exports com.janjac.controllers.bus;
+    exports com.janjac.models;
+    exports com.janjac.fx;
     opens com.janjac to javafx.fxml;
     exports com.janjac;
 }

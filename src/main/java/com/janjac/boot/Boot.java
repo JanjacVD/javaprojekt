@@ -3,7 +3,11 @@ package com.janjac.boot;
 
 public class Boot {
     public static void main(String[] args) {
-        MigrationRunner.run();
-        FactoryRunner.run();
+        try {
+            MigrationRunner.run();
+            FactoryRunner.run();
+        } catch (Exception e) {
+
+        }
     }
 }

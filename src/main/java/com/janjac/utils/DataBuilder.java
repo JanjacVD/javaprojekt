@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class DataBuilder {
     private final Map<String, Object> data = new HashMap<>();
-
     public DataBuilder(Object... args) {
         if (args.length % 2 != 0) {
             throw new IllegalArgumentException("Arguments must come in pairs (key-value pairs).");
